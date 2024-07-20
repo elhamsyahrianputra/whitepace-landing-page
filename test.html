@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Slide Toggle</title>
+		<style>
+			.container {
+				overflow: hidden; /* Ensures content is hidden during transition */
+				height: 0; /* Initially collapsed */
+				transition: height 0.3s ease-out; /* Smooth transition */
+			}
+
+			.container.open {
+				height: 100px; /* Adjust based on content height */
+			}
+
+			.content {
+				background-color: lightblue;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="toggleButton">Toggle</button>
+		<div class="container">
+			<div class="content">
+				<p>This is some content that will slide up and down.</p>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+
+	<script>
+		document.getElementById("toggleButton").addEventListener("click", function () {
+			var container = document.querySelector(".container");
+			container.classList.toggle("open");
+		});
+	</script>
+</html>
