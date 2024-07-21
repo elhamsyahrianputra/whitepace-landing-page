@@ -61,7 +61,7 @@
 	.navbar-nav .navbar-item .dropdown-nav.show {
 		@apply mb-4 mt-2 max-h-fit overflow-hidden transition-all duration-300 ease-in-out xl:border;
 	}
-w
+
 	.navbar-nav .navbar-item .dropdown-nav .dropdown-item {
 		@apply pl-4 pr-8;
 	}
@@ -69,4 +69,21 @@ w
 	.navbar-nav .navbar-item .dropdown-nav .dropdown-item a {
 		@apply block border-b border-b-primary-dark border-opacity-20 py-2;
 	}
+
+	span.drop-title {
+		@apply relative bg-contain bg-no-repeat pb-8
+		bg-[url('/assets/img/decoration/drop-yellow.svg')] bg-[0_25px]
+		md:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] md:bg-[0_45px]
+		lg:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] lg:bg-[100%_60px] lg:bg-[length:50%]
+		xl:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] xl:bg-[100%_50px] xl:bg-contain;
+	}
+
+	/* span.drop-title::after {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 10px;
+		height: 10px;
+		background-image: url(../../assets/img/decoration/shape-yellow.svg );
+	} */
 }
