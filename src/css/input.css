@@ -29,35 +29,39 @@
 		@apply opacity-100;
 	}
 
-	.navbar-nav {
-		@apply absolute left-0 top-full flex w-full flex-col gap-4 bg-white py-4 pl-8 pt-8 text-lg font-medium text-primary shadow-md xl:gap-14 xl:p-0 xl:shadow-none xl:static xl:flex-row;
+	#navbar nav .navbar-nav {
+		@apply absolute left-0 top-full flex h-0 w-full flex-col gap-4 overflow-hidden bg-white text-lg font-medium text-primary shadow-md transition-[height] delay-300 xl:static xl:h-fit xl:flex-row xl:gap-14 xl:overflow-visible xl:p-0 xl:shadow-none;
+	}
+
+	#navbar nav.show .navbar-nav {
+		@apply h-fit py-4 pl-8 pt-8;
 	}
 
 	.navbar-nav .navbar-item .nav-link {
-		@apply relative block cursor-pointer text-lg font-bold transition-colors duration-300	;
+		@apply relative block cursor-pointer text-lg font-bold transition-all duration-[0.3s] hover:opacity-80;
 	}
 
 	.navbar-nav .navbar-item:has(ul.dropdown-nav.show) .nav-link {
-		@apply text-primary-dark ;
+		@apply text-primary-dark;
 	}
 
 	.navbar-nav .navbar-item:has(ul.dropdown-nav) .nav-link::after {
 		content: "";
-		@apply absolute right-8 xl:-right-[10px] xl:rotate-[135deg] xl:translate-x-full top-1/2 inline-block h-2 w-2 -translate-y-1/2 rotate-45 border-r-2 border-t-2 border-primary transition-all duration-300 ease-in-out;
+		@apply absolute right-8 top-1/2 inline-block h-2 w-2 -translate-y-1/2 rotate-45 border-r-2 border-t-2 border-primary transition-all duration-300 ease-in-out xl:-right-[10px] xl:translate-x-full xl:rotate-[135deg];
 	}
 
 	.navbar-nav .navbar-item:has(ul.dropdown-nav.show) .nav-link::after {
-		@apply rotate-[135deg] xl:translate-y-[1px] border-primary-dark;
+		@apply rotate-[135deg] border-primary-dark xl:translate-y-[1px];
 	}
 
 	.navbar-nav .navbar-item .dropdown-nav {
-		@apply my-0 flex xl:absolute xl:bg-light xl:rounded-md max-h-0 flex-col overflow-hidden transition-[max-height,margin] duration-[300,300] ease-in-out xl:min-w-[200px];
+		@apply my-0 flex max-h-0 flex-col overflow-hidden transition-all duration-300 ease-in-out xl:absolute xl:min-w-[200px] xl:rounded-md xl:bg-light;
 	}
 
 	.navbar-nav .navbar-item .dropdown-nav.show {
-		@apply mb-4 mt-2 max-h-fit overflow-hidden xl:border transition-[max-height,margin] duration-[300,300] ease-in-out;
+		@apply mb-4 mt-2 max-h-fit overflow-hidden transition-all duration-300 ease-in-out xl:border;
 	}
-
+w
 	.navbar-nav .navbar-item .dropdown-nav .dropdown-item {
 		@apply pl-4 pr-8;
 	}

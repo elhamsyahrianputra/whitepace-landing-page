@@ -14,10 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navLinks.forEach(function (navLink) {
         navLink.addEventListener('click', function (event) {
-            dropdownShows.forEach(dropdownShow => {
-                dropdownShow.classList.remove('show');
-                dropdownShow.style.maxHeight = 0;
-            });
             event.preventDefault();
 
             const dropdownNav = navLink.nextElementSibling;
@@ -27,16 +23,36 @@ document.addEventListener("DOMContentLoaded", function () {
                     dropdownNav.classList.remove('show');
                 }
                 else {
+                    dropdownShows.forEach(function (otherDropdown) {
+                        if (otherDropdown !== dropdownNav && otherDropdown.classList.contains('show')) {
+                            otherDropdown.style.maxHeight = 0;
+                            otherDropdown.classList.remove('show');
+                        }
+                    });
+
                     dropdownNav.style.maxHeight = dropdownNav.scrollHeight + 'px';
                     dropdownNav.classList.add('show');
-
-                    dropdownNav.addEventListener('transitionend', function () {
-                        if (dropdownNav.classList.contains('open')) {
-                            dropdownNav.style.maxHeight = 'none';
-                        }
-                    }, { once: true });
                 }
             }
         });
+    });
+
+    document.addEventListener('click', function (event) {
+        let isClickInside = false;
+
+        navLinks.forEach(function (navLink) {
+            if (navLink.contains(event.target) || (navLink.nextElementSibling && navLink.nextElementSibling.contains(event.target))) {
+                isClickInside = true;
+            }
+        });
+
+        if (!isClickInside) {
+            dropdownShows.forEach(function (dropdownNav) {
+                if (dropdownNav.classList.contains('show')) {
+                    dropdownNav.style.maxHeight = 0;
+                    dropdownNav.classList.remove('show');
+                }
+            });
+        }
     });
 });

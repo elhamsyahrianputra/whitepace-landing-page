@@ -16,11 +16,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 	</head>
 
-	<body>
-		<header id="navbar" class="sticky top-0 shadow ">
-			<div class="container flex items-center justify-between p-4 sm:px-8 mx-auto">
+	<body class="h-[3000px]">
+		<header id="navbar" class="sticky top-0 z-[9999] bg-light shadow">
+			<div class="flex items-center justify-between p-4 sm:px-8">
 				<div>
-					<img src="./assets/img/logo/whitespace-blue.svg" class="h-6 sm:h-9" alt="" src="./assets/img/logo/whitespace-blue.svg" class="h-6" alt="" />
+					<img src="./assets/img/logo/whitespace-blue.svg" class="h-6 lg:h-9" alt="" src="./assets/img/logo/whitespace-blue.svg" class="h-6" alt="" />
 				</div>
 				<nav>
 					<ul class="navbar-nav">
@@ -31,7 +31,7 @@
 							<a href="#" class="nav-link">Solutions</a>
 						</li>
 						<li class="navbar-item">
-							<a class="nav-link">Resources</a>
+							<a href="#" class="nav-link">Resources</a>
 							<ul class="dropdown-nav">
 								<li class="dropdown-item">
 									<a href="#awfawef">Image</a>
@@ -51,16 +51,16 @@
 						</li>
 						<li class="navbar-item sm:hidden">
 							<div class="flex flex-col gap-4 pr-8 text-center">
-								<a href="#login" class="text-priamry-dark rounded-md bg-secondary-yellow py-3 font-medium">Login</a>
-								<a href="#try" class="rounded-md bg-primary py-3 font-medium text-light">Try Whitespace Free</a>
+								<a href="#login" class="text-priamry-dark rounded-md bg-secondary-yellow py-3 font-medium transition-opacity duration-300 hover:opacity-80">Login</a>
+								<a href="#try" class="rounded-md bg-primary py-3 font-medium text-light transition-opacity duration-300 hover:opacity-80">Try Whitespace Free</a>
 							</div>
 						</li>
 					</ul>
 				</nav>
 				<div class="flex items-center gap-5">
-					<div class="hidden gap-6 sm:flex">
-						<a href="#login" class="text-priamry-dark rounded-md bg-secondary-yellow px-6 py-4 font-medium">Login</a>
-						<a href="#try" class="rounded-md bg-primary px-6 py-4 font-medium text-light">Try Whitespace Free</a>
+					<div class="hidden gap-6 md:flex">
+						<a href="#login" class="text-priamry-dark rounded-md bg-secondary-yellow px-6 py-4 font-medium transition-opacity duration-300 hover:opacity-80">Login</a>
+						<a href="#try" class="rounded-md bg-primary px-6 py-4 font-medium text-light transition-opacity duration-300 hover:opacity-80">Try Whitespace Free</a>
 					</div>
 					<button id="menu-button" class="flex flex-col gap-2">
 						<span class="line"></span>
