@@ -888,12 +888,20 @@ span.drop-title {
   height: 3000px;
 }
 
-.w-5\/6 {
-  width: 83.333333%;
+.h-72 {
+  height: 18rem;
 }
 
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-\[75\%\] {
+  width: 75%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .flex-col {
@@ -949,6 +957,11 @@ span.drop-title {
 .bg-secondary-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(255 228 146 / var(--tw-bg-opacity));
+}
+
+.bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 37 41 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -1080,16 +1093,20 @@ span.drop-title {
 }
 
 @media (min-width: 768px) {
-  .md\:order-2 {
-    order: 2;
-  }
-
   .md\:flex {
     display: flex;
   }
 
   .md\:h-80 {
     height: 20rem;
+  }
+
+  .md\:h-96 {
+    height: 24rem;
+  }
+
+  .md\:h-\[450px\] {
+    height: 450px;
   }
 
   .md\:px-5 {
@@ -1154,10 +1171,6 @@ span.drop-title {
 
   .lg\:justify-center {
     justify-content: center;
-  }
-
-  .lg\:gap-8 {
-    gap: 2rem;
   }
 
   .lg\:gap-10 {
