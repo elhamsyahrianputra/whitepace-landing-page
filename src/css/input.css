@@ -9,6 +9,10 @@
 }
 
 @layer components {
+	span.drop-title {
+		@apply relative bg-[url('/assets/img/decoration/drop-yellow.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] md:bg-[0_45px] lg:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] lg:bg-[length:50%] lg:bg-[100%_60px] xl:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] xl:bg-contain xl:bg-[100%_50px];
+	}
+
 	#menu-button {
 		@apply xl:hidden;
 	}
@@ -70,20 +74,67 @@
 		@apply block border-b border-b-primary-dark border-opacity-20 py-2;
 	}
 
-	span.drop-title {
-		@apply relative bg-contain bg-no-repeat pb-8
-		bg-[url('/assets/img/decoration/drop-yellow.svg')] bg-[0_25px]
-		md:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] md:bg-[0_45px]
-		lg:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] lg:bg-[100%_60px] lg:bg-[length:50%]
-		xl:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] xl:bg-[100%_50px] xl:bg-contain;
+	/* Plan Carousel */
+	.plan-carousel {
+		@apply py-6;
 	}
 
-	/* span.drop-title::after {
-		position: absolute;
-		content: '';
-		display: block;
-		width: 10px;
-		height: 10px;
-		background-image: url(../../assets/img/decoration/shape-yellow.svg );
-	} */
+	.plan-item {
+		@apply flex h-fit flex-col gap-6 rounded-lg border border-secondary-yellow p-5 text-black transition-all duration-300 ease-in-out md:mt-20;
+	}
+
+	.plan-item.is-active {
+		@apply card-shadow border-transparent text-primary-dark transition-all duration-300 md:mt-0 xl:py-20;
+	}
+
+	.plan-item .plan-header {
+		@apply flex flex-col gap-6;
+	}
+
+	.plan-item .plan-benefit {
+		@apply flex flex-col gap-7;
+	}
+
+	.plan-item.is-active .plan-benefit {
+		@apply xl:text-lg;
+	}
+
+	.plan-benefit li {
+		@apply flex items-center gap-5;
+	}
+
+	.plan-item .plan-benefit li::before {
+		@apply inline-block h-[18px] w-[18px] flex-shrink-0 bg-[url('/assets/img/icon/check.svg')] bg-contain bg-no-repeat transition-all duration-300 content-[''];
+	}
+
+	.plan-item.is-active .plan-benefit li::before {
+		@apply inline-block h-[18px] w-[18px] flex-shrink-0 bg-[url('/assets/img/icon/check-blue.svg')] bg-contain bg-no-repeat transition-all duration-300 content-[''];
+	}
+
+	.plan-item .plan-button {
+		@apply inline-block rounded-lg border border-secondary-yellow px-10 py-4 transition-colors duration-300;
+	}
+
+	.plan-item.is-active .plan-button {
+		@apply border border-transparent bg-primary px-10 text-white transition-colors duration-300;
+	}
+	/* Plan Carousen End */
+}
+
+@layer utilities {
+	.card-shadow {
+		@apply shadow-[0_0_20px_1px_rgba(0,0,0,0.1)];
+	}
+}
+
+.splide__pagination {
+	@apply mt-10 flex gap-3;
+}
+
+.splide__pagination__page {
+	@apply  h-3 w-3 cursor-pointer rounded-full bg-primary transition-colors duration-300;
+}
+
+.splide__pagination__page.is-active {
+	@apply bg-primary-dark;
 }
