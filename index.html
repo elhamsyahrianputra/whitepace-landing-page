@@ -15,10 +15,9 @@
 
 		<!-- Splide JS -->
 		<link rel="stylesheet" href="./assets/vendor/splide/css/splide-core.min.css" />
-		
+
 		<!-- CSS -->
 		<link rel="stylesheet" href="./dist/css/main.css" />
-
 	</head>
 
 	<body class="h-[3000px]">
@@ -76,9 +75,9 @@
 			</div>
 		</header>
 
-		<main class="container mx-auto">
+		<main>
 			<section id="hero">
-				<div class="flex flex-col px-4 py-20 md:px-5 md:py-[100px] lg:flex-row lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
+				<div class="container mx-auto flex flex-col px-4 py-20 md:px-5 md:py-[100px] lg:flex-row lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
 					<div class="mb-[100px] flex flex-col text-center lg:mb-0 lg:w-7/12 lg:items-start lg:justify-center lg:text-left xl:w-1/2">
 						<h1 class="mb-6 text-4xl font-bold leading-none tracking-[-2%] text-primary md:text-[54px] lg:text-[64px]">Get More Done with whitepace</h1>
 						<p class="mb-[60px] text-lg leading-[30px] text-primary">Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
@@ -92,7 +91,7 @@
 				</div>
 			</section>
 			<section id="project">
-				<div class="px-4 py-20 md:px-5 md:py-[100px] lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
+				<div class="container mx-auto px-4 py-20 md:px-5 md:py-[100px] lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
 					<div class="mb-[100px] flex flex-col lg:flex-row">
 						<div class="mb-[100px] flex flex-col text-center lg:mb-0 lg:w-7/12 lg:items-start lg:justify-center lg:text-left xl:w-1/2">
 							<h1 class="mb-6 text-4xl font-bold leading-none tracking-[-2%] text-dark md:text-[54px] lg:text-[64px]">
@@ -126,7 +125,7 @@
 				</div>
 			</section>
 			<section id="customise">
-				<div class="flex flex-col px-4 py-20 md:px-5 md:py-[100px] lg:flex-row lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
+				<div class="container mx-auto flex flex-col px-4 py-20 md:px-5 md:py-[100px] lg:flex-row lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
 					<div class="mb-[100px] flex flex-col text-center lg:mb-0 lg:w-7/12 lg:items-start lg:justify-center lg:text-left xl:w-1/2">
 						<h1 class="mb-6 text-4xl font-bold leading-none tracking-[-2%] text-dark md:text-[54px] lg:text-[64px]">
 							Customise it to your
@@ -143,7 +142,7 @@
 				</div>
 			</section>
 			<section id="plan">
-				<div class="flex flex-col items-center px-4 py-20 md:px-5 md:py-[100px] lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
+				<div class="container mx-auto flex flex-col items-center px-4 py-20 md:px-5 md:py-[100px] lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
 					<div class="flex flex-col text-center lg:mb-0 lg:w-9/12 lg:items-center lg:justify-center">
 						<h1 class="mb-6 text-4xl font-bold leading-none tracking-[-2%] text-dark md:text-[54px] lg:text-[64px]">
 							Choose
@@ -213,6 +212,17 @@
 					</div>
 				</div>
 			</section>
+			<section id="your-work">
+				<div class="flex flex-col bg-primary-dark px-4 py-[100px] md:px-5 md:py-[140px] lg:flex-row lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
+					<div class="mb-[100px] flex flex-col text-left md:w-9/12 lg:mb-0 lg:w-8/12 lg:items-start lg:justify-center lg:text-left xl:w-screen xl:items-center xl:mx-auto">
+						<h1 class="mb-6 text-4xl font-bold leading-none tracking-[-2%] text-light md:text-[54px] lg:text-[64px] xl:text-7xl">Your work, everywhere you are</h1>
+						<p class="mb-[60px] lg:text-center text-lg leading-[30px] text-light">Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!</p>
+						<div class="flex justify-start lg:justify-start">
+							<a href="#" class="rounded-lg bg-primary px-10 py-5 text-center text-light lg:text-lg">Try TasKey</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<!-- Main Script -->
@@ -225,19 +235,19 @@
 			document.addEventListener("DOMContentLoaded", function () {
 				new Splide(".splide", {
 					type: "slide",
-					width: '100%',
+					width: "100%",
 					start: 1,
-					gap: '2rem',
+					gap: "2rem",
 					arrows: false,
-					mediaQuery: 'min',
+					mediaQuery: "min",
 					breakpoints: {
 						0: {
 							perPage: 1,
-							padding: 5
+							padding: 5,
 						},
 						768: {
 							perPage: 1,
-							padding: '20%',
+							padding: "20%",
 						},
 						1024: {
 							perPage: 3,

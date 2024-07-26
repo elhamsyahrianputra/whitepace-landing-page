@@ -30,7 +30,7 @@
 	}
 
 	#navbar nav.show {
-		@apply opacity-100;
+		@apply opacity-100 ;
 	}
 
 	#navbar nav .navbar-nav {
