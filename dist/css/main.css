@@ -1058,6 +1058,18 @@ span.drop-blue {
   height: 3000px;
 }
 
+.h-\[68px\] {
+  height: 68px;
+}
+
+.h-\[46px\] {
+  height: 46px;
+}
+
+.h-\[49px\] {
+  height: 49px;
+}
+
 .w-\[60\%\] {
   width: 60%;
 }
@@ -1098,6 +1110,10 @@ span.drop-blue {
   gap: 1.5rem;
 }
 
+.gap-\[100px\] {
+  gap: 100px;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1124,6 +1140,11 @@ span.drop-blue {
 .bg-secondary-yellow {
   --tw-bg-opacity: 1;
   background-color: rgb(255 228 146 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -1315,6 +1336,22 @@ span.drop-blue {
 
   .md\:h-\[450px\] {
     height: 450px;
+  }
+
+  .md\:h-\[62px\] {
+    height: 62px;
+  }
+
+  .md\:h-\[68px\] {
+    height: 68px;
+  }
+
+  .md\:h-\[71px\] {
+    height: 71px;
+  }
+
+  .md\:h-\[70px\] {
+    height: 70px;
   }
 
   .md\:w-9\/12 {
