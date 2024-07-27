@@ -9,8 +9,12 @@
 }
 
 @layer components {
-	span.drop-title {
-		@apply relative bg-[url('/assets/img/decoration/drop-yellow.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] md:bg-[0_45px] lg:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] lg:bg-[length:50%] lg:bg-[100%_60px] xl:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] xl:bg-contain xl:bg-[100%_50px];
+	span.drop-yellow {
+		@apply relative bg-[url('/assets/img/decoration/drop-yellow.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] md:bg-[0_45px] lg:bg-[url('/assets/img/decoration/drop-yellow.svg')] lg:bg-[length:50%] lg:bg-[100%_60px] xl:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] xl:bg-contain xl:bg-[100%_50px];
+	}
+
+	span.drop-blue {
+		@apply relative bg-[url('/assets/img/decoration/drop-blue.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('/assets/img/decoration/drop-blue-md.svg')] md:bg-[0_45px] lg:bg-[url('/assets/img/decoration/drop-blue.svg')] lg:bg-[100%_60px] xl:bg-[url('/assets/img/decoration/drop-blue-md.svg')] xl:bg-contain xl:bg-[100%_50px];
 	}
 
 	#menu-button {
