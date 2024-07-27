@@ -1017,6 +1017,10 @@ span.drop-blue {
   order: 2;
 }
 
+.order-1 {
+  order: 1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1074,6 +1078,10 @@ span.drop-blue {
   width: 60%;
 }
 
+.w-\[485px\] {
+  width: 485px;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1112,6 +1120,18 @@ span.drop-blue {
 
 .gap-\[100px\] {
   gap: 100px;
+}
+
+.gap-\[60px\] {
+  gap: 60px;
+}
+
+.gap-\[50px\] {
+  gap: 50px;
+}
+
+.gap-\[40px\] {
+  gap: 40px;
 }
 
 .rounded-lg {
@@ -1358,6 +1378,18 @@ span.drop-blue {
     width: 75%;
   }
 
+  .md\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1417,6 +1449,14 @@ span.drop-blue {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-6\/12 {
+    width: 50%;
+  }
+
+  .lg\:w-4\/12 {
+    width: 33.333333%;
   }
 
   .lg\:flex-row {
@@ -1483,6 +1523,14 @@ span.drop-blue {
 
   .xl\:w-screen {
     width: 100vw;
+  }
+
+  .xl\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .xl\:w-7\/12 {
+    width: 58.333333%;
   }
 
   .xl\:items-center {
