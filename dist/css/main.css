@@ -594,7 +594,7 @@ video {
 
 span.drop-yellow {
   position: relative;
-  background-image: url('/assets/img/decoration/drop-yellow.svg');
+  background-image: url('../../assets/img/decoration/drop-yellow.svg');
   background-size: contain;
   background-position: 0 25px;
   background-repeat: no-repeat;
@@ -603,14 +603,14 @@ span.drop-yellow {
 
 @media (min-width: 768px) {
   span.drop-yellow {
-    background-image: url('/assets/img/decoration/drop-yellow-md.svg');
+    background-image: url('../../assets/img/decoration/drop-yellow-md.svg');
     background-position: 0 45px;
   }
 }
 
 @media (min-width: 1024px) {
   span.drop-yellow {
-    background-image: url('/assets/img/decoration/drop-yellow.svg');
+    background-image: url('../../assets/img/decoration/drop-yellow.svg');
     background-size: 50%;
     background-position: 100% 60px;
   }
@@ -618,7 +618,7 @@ span.drop-yellow {
 
 @media (min-width: 1280px) {
   span.drop-yellow {
-    background-image: url('/assets/img/decoration/drop-yellow-md.svg');
+    background-image: url('../../assets/img/decoration/drop-yellow-md.svg');
     background-size: contain;
     background-position: 100% 50px;
   }
@@ -626,7 +626,7 @@ span.drop-yellow {
 
 span.drop-blue {
   position: relative;
-  background-image: url('/assets/img/decoration/drop-blue.svg');
+  background-image: url('../../assets/img/decoration/drop-blue.svg');
   background-size: contain;
   background-position: 0 25px;
   background-repeat: no-repeat;
@@ -635,21 +635,21 @@ span.drop-blue {
 
 @media (min-width: 768px) {
   span.drop-blue {
-    background-image: url('/assets/img/decoration/drop-blue-md.svg');
+    background-image: url('../../assets/img/decoration/drop-blue-md.svg');
     background-position: 0 45px;
   }
 }
 
 @media (min-width: 1024px) {
   span.drop-blue {
-    background-image: url('/assets/img/decoration/drop-blue.svg');
+    background-image: url('../../assets/img/decoration/drop-blue.svg');
     background-position: 100% 60px;
   }
 }
 
 @media (min-width: 1280px) {
   span.drop-blue {
-    background-image: url('/assets/img/decoration/drop-blue-md.svg');
+    background-image: url('../../assets/img/decoration/drop-blue-md.svg');
     background-size: contain;
     background-position: 100% 50px;
   }
@@ -945,7 +945,7 @@ span.drop-blue {
   height: 18px;
   width: 18px;
   flex-shrink: 0;
-  background-image: url('/assets/img/icon/check.svg');
+  background-image: url('../../assets/img/icon/check.svg');
   background-size: contain;
   background-repeat: no-repeat;
   transition-property: all;
@@ -960,7 +960,7 @@ span.drop-blue {
   height: 18px;
   width: 18px;
   flex-shrink: 0;
-  background-image: url('/assets/img/icon/check-blue.svg');
+  background-image: url('../../assets/img/icon/check-blue.svg');
   background-size: contain;
   background-repeat: no-repeat;
   transition-property: all;
@@ -1431,7 +1431,7 @@ span.drop-blue {
   display: block;
   height: 15px;
   width: 15px;
-  background-image: url('/assets/img/icon/star.svg');
+  background-image: url('../../assets/img/icon/star.svg');
   background-size: contain;
   background-repeat: no-repeat;
   --tw-content: '';
@@ -1478,7 +1478,7 @@ span.drop-blue {
   display: block;
   height: 75px;
   width: 75px;
-  background-image: url('/assets/img/icon/left-arrow-navigation.svg');
+  background-image: url('../../assets/img/icon/left-arrow-navigation.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1487,7 +1487,7 @@ span.drop-blue {
   display: block;
   height: 75px;
   width: 75px;
-  background-image: url('/assets/img/icon/right-arrow-navigation.svg');
+  background-image: url('../../assets/img/icon/right-arrow-navigation.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }

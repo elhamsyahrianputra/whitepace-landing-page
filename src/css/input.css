@@ -10,11 +10,11 @@
 
 @layer components {
 	span.drop-yellow {
-		@apply relative bg-[url('/assets/img/decoration/drop-yellow.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] md:bg-[0_45px] lg:bg-[url('/assets/img/decoration/drop-yellow.svg')] lg:bg-[length:50%] lg:bg-[100%_60px] xl:bg-[url('/assets/img/decoration/drop-yellow-md.svg')] xl:bg-contain xl:bg-[100%_50px];
+		@apply relative bg-[url('../../assets/img/decoration/drop-yellow.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('../../assets/img/decoration/drop-yellow-md.svg')] md:bg-[0_45px] lg:bg-[url('../../assets/img/decoration/drop-yellow.svg')] lg:bg-[length:50%] lg:bg-[100%_60px] xl:bg-[url('../../assets/img/decoration/drop-yellow-md.svg')] xl:bg-contain xl:bg-[100%_50px];
 	}
 
 	span.drop-blue {
-		@apply relative bg-[url('/assets/img/decoration/drop-blue.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('/assets/img/decoration/drop-blue-md.svg')] md:bg-[0_45px] lg:bg-[url('/assets/img/decoration/drop-blue.svg')] lg:bg-[100%_60px] xl:bg-[url('/assets/img/decoration/drop-blue-md.svg')] xl:bg-contain xl:bg-[100%_50px];
+		@apply relative bg-[url('../../assets/img/decoration/drop-blue.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('../../assets/img/decoration/drop-blue-md.svg')] md:bg-[0_45px] lg:bg-[url('../../assets/img/decoration/drop-blue.svg')] lg:bg-[100%_60px] xl:bg-[url('../../assets/img/decoration/drop-blue-md.svg')] xl:bg-contain xl:bg-[100%_50px];
 	}
 
 	#menu-button {
@@ -108,11 +108,11 @@
 	}
 
 	.plan-item .plan-benefit li::before {
-		@apply inline-block h-[18px] w-[18px] flex-shrink-0 bg-[url('/assets/img/icon/check.svg')] bg-contain bg-no-repeat transition-all duration-300 content-[''];
+		@apply inline-block h-[18px] w-[18px] flex-shrink-0 bg-[url('../../assets/img/icon/check.svg')] bg-contain bg-no-repeat transition-all duration-300 content-[''];
 	}
 
 	.plan-item.is-active .plan-benefit li::before {
-		@apply inline-block h-[18px] w-[18px] flex-shrink-0 bg-[url('/assets/img/icon/check-blue.svg')] bg-contain bg-no-repeat transition-all duration-300 content-[''];
+		@apply inline-block h-[18px] w-[18px] flex-shrink-0 bg-[url('../../assets/img/icon/check-blue.svg')] bg-contain bg-no-repeat transition-all duration-300 content-[''];
 	}
 
 	.plan-item .plan-button {
@@ -165,7 +165,7 @@
 	}
 
 	.star::before {
-		@apply content-[''] block bg-[url('/assets/img/icon/star.svg')] h-[15px] w-[15px] bg-no-repeat bg-contain;
+		@apply content-[''] block bg-[url('../../assets/img/icon/star.svg')] h-[15px] w-[15px] bg-no-repeat bg-contain;
 	}
 }
 
@@ -189,10 +189,10 @@
 	@apply flex gap-[100px] justify-center mt-[60px];
 }
 .splide__arrow--prev {
-	@apply bg-[url('/assets/img/icon/left-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
+	@apply bg-[url('../../assets/img/icon/left-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
 	
 }
 .splide__arrow--next {
-	@apply bg-[url('/assets/img/icon/right-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
+	@apply bg-[url('../../assets/img/icon/right-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
 }
 /* Custom Splide Arrow End*/
