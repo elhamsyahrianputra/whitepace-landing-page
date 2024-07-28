@@ -123,14 +123,53 @@
 		@apply border border-transparent bg-primary px-10 text-white transition-colors duration-300;
 	}
 	/* Plan Carousen End */
+
+	/* Review Carousel */
+	.review-item {
+		@apply card-shadow flex flex-col gap-12 rounded-lg px-4 py-5 bg-primary text-light transition-colors duration-300;
+	}
+
+	.review-item.is-active {
+		@apply card-shadow flex flex-col gap-12 rounded-lg px-4 py-5 bg-light text-dark transition-colors duration-300;
+	}
+
+	.review-item .review-avatar {
+		@apply mb-[35px];
+	}
+
+	.review-item .review-content .review-avatar > img {
+		@apply h-[70px] w-[70px] rounded-full object-cover
+	}
+
+	.review-item .review-content .review-quote {
+		@apply text-lg before:content-['“'] after:content-['”'];
+	}
+
+	.review-item .review-info .review-person .name {
+		@apply text-lg font-bold;
+	}
+
+	.review-item .review-info .review-person .company {
+		@apply text-lg;
+	}
+
+	.review-item .review-info .list-star {
+		@apply flex gap-2;
+	}
+	/* Review Carousel End */
 }
 
 @layer utilities {
 	.card-shadow {
 		@apply shadow-[0_0_20px_1px_rgba(0,0,0,0.1)];
 	}
+
+	.star::before {
+		@apply content-[''] block bg-[url('/assets/img/icon/star.svg')] h-[15px] w-[15px] bg-no-repeat bg-contain;
+	}
 }
 
+/* Cutom Splide dots pagination */
 .splide__pagination {
 	@apply mt-10 flex gap-3;
 }
@@ -142,3 +181,18 @@
 .splide__pagination__page.is-active {
 	@apply bg-primary-dark;
 }
+/* Cutom Splide dots pagination End */
+
+
+/* Custom Splide Arrow */
+.splide__arrows {
+	@apply flex gap-[100px] justify-center mt-[60px];
+}
+.splide__arrow--prev {
+	@apply bg-[url('/assets/img/icon/left-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
+	
+}
+.splide__arrow--next {
+	@apply bg-[url('/assets/img/icon/right-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
+}
+/* Custom Splide Arrow End*/
