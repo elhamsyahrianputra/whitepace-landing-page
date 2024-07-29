@@ -116,11 +116,11 @@
 	}
 
 	.plan-item .plan-button {
-		@apply inline-block rounded-lg border border-secondary-yellow px-10 py-4 transition-colors duration-300;
+		@apply inline-block rounded-lg border border-secondary-yellow px-10 py-4 transition-colors duration-300 hover:bg-secondary-yellow hover:text-primary;
 	}
 
 	.plan-item.is-active .plan-button {
-		@apply border border-transparent bg-primary px-10 text-white transition-colors duration-300;
+		@apply border border-transparent bg-primary px-10 text-white transition-all hover:opacity-80 duration-300;
 	}
 	/* Plan Carousen End */
 
@@ -189,10 +189,10 @@
 	@apply flex gap-[100px] justify-center mt-[60px];
 }
 .splide__arrow--prev {
-	@apply bg-[url('../../assets/img/icon/left-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
+	@apply bg-[url('../../assets/img/icon/left-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain hover:opacity-80 duration-300 transition-opacity;
 	
 }
 .splide__arrow--next {
-	@apply bg-[url('../../assets/img/icon/right-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain;
+	@apply bg-[url('../../assets/img/icon/right-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain hover:opacity-80 duration-300 transition-opacity;
 }
 /* Custom Splide Arrow End*/

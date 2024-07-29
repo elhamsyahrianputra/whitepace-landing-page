@@ -985,6 +985,13 @@ span.drop-blue {
   transition-duration: 300ms;
 }
 
+.plan-item .plan-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 228 146 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(79 156 249 / var(--tw-text-opacity));
+}
+
 .plan-item.is-active .plan-button {
   border-width: 1px;
   border-color: transparent;
@@ -994,9 +1001,13 @@ span.drop-blue {
   padding-right: 2.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+}
+
+.plan-item.is-active .plan-button:hover {
+  opacity: 0.8;
 }
 
 /* Plan Carousen End */
@@ -1417,6 +1428,12 @@ span.drop-blue {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1481,6 +1498,13 @@ span.drop-blue {
   background-image: url('../../assets/img/icon/left-arrow-navigation.svg');
   background-size: contain;
   background-repeat: no-repeat;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.splide__arrow--prev:hover {
+  opacity: 0.8;
 }
 
 .splide__arrow--next {
@@ -1490,9 +1514,20 @@ span.drop-blue {
   background-image: url('../../assets/img/icon/right-arrow-navigation.svg');
   background-size: contain;
   background-repeat: no-repeat;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.splide__arrow--next:hover {
+  opacity: 0.8;
 }
 
 /* Custom Splide Arrow End*/
+
+.hover\:border:hover {
+  border-width: 1px;
+}
 
 .hover\:text-secondary-yellow:hover {
   --tw-text-opacity: 1;
