@@ -1,10 +1,44 @@
+// Menu Button
 const menuButton = document.querySelector('#menu-button');
 const navbarNav = document.querySelector('#navbar nav');
-
-// Menu Button
 menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('show');
     navbarNav.classList.toggle('show');
+});
+
+// Login Form Toggle
+let loginButtonToggles = document.querySelectorAll("#btn-login");
+let loginButtonClose = document.querySelector("#btn-close");
+let loginModal = document.querySelector("#login-modal")
+let loginCard = document.querySelector("#login-card")
+
+loginButtonToggles.forEach((loginButtonToggle) => {
+    loginButtonToggle.addEventListener('click', function () {
+        loginModal.classList.add('show')
+    });
+});
+
+loginButtonClose.addEventListener('click', function () {
+    loginModal.classList.remove('show')
+});
+window.addEventListener('click', function (event) {
+    if (event.target == loginModal && !loginCard.contains(event.target)) {
+        loginModal.classList.remove('show');
+    }
+});
+
+// Navbar Scroll Animation
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-100px";
+    } else {
+        navbar.style.top = "0";
+    }
+    lastScrollTop = scrollTop;
 });
 
 // Navbar Dropdown

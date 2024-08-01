@@ -17,6 +17,14 @@
 		@apply relative bg-[url('../../assets/img/decoration/drop-blue.svg')] bg-contain bg-[0_25px] bg-no-repeat pb-8 md:bg-[url('../../assets/img/decoration/drop-blue-md.svg')] md:bg-[0_45px] lg:bg-[url('../../assets/img/decoration/drop-blue.svg')] lg:bg-[100%_60px] xl:bg-[url('../../assets/img/decoration/drop-blue-md.svg')] xl:bg-contain xl:bg-[100%_50px];
 	}
 
+	.login-modal {
+		@apply fixed items-center left-0 top-0 z-[999999] w-full h-full hidden transition-opacity duration-300;
+	}
+
+	.login-modal.show {
+		@apply flex justify-center overflow-visible transition-opacity duration-300 bg-opacity-50 bg-dark;
+	}
+
 	#menu-button {
 		@apply xl:hidden;
 	}
@@ -29,12 +37,16 @@
 		@apply -translate-x-2;
 	}
 
+	#navbar {
+		@apply transition-all duration-[0.4s] ease-in-out;
+	}
+
 	#navbar nav {
 		@apply opacity-0 transition-opacity duration-300 xl:opacity-100;
 	}
 
 	#navbar nav.show {
-		@apply opacity-100 ;
+		@apply opacity-100;
 	}
 
 	#navbar nav .navbar-nav {
@@ -75,7 +87,7 @@
 	}
 
 	.navbar-nav .navbar-item .dropdown-nav .dropdown-item a {
-		@apply block border-b border-b-primary-dark border-opacity-20 py-2;
+		@apply block border-b border-b-primary-dark border-opacity-20 py-2 hover:opacity-80 transition-opacity duration-300;
 	}
 
 	/* Plan Carousel */
@@ -120,17 +132,17 @@
 	}
 
 	.plan-item.is-active .plan-button {
-		@apply border border-transparent bg-primary px-10 text-white transition-all hover:opacity-80 duration-300;
+		@apply border border-transparent bg-primary px-10 text-white transition-all duration-300 hover:opacity-80;
 	}
 	/* Plan Carousen End */
 
 	/* Review Carousel */
 	.review-item {
-		@apply card-shadow flex flex-col gap-12 rounded-lg px-4 py-5 bg-primary text-light transition-colors duration-300;
+		@apply card-shadow flex flex-col gap-12 rounded-lg bg-primary px-4 py-5 text-light transition-colors duration-300;
 	}
 
 	.review-item.is-active {
-		@apply card-shadow flex flex-col gap-12 rounded-lg px-4 py-5 bg-light text-dark transition-colors duration-300;
+		@apply card-shadow flex flex-col gap-12 rounded-lg bg-light px-4 py-5 text-dark transition-colors duration-300;
 	}
 
 	.review-item .review-avatar {
@@ -138,7 +150,7 @@
 	}
 
 	.review-item .review-content .review-avatar > img {
-		@apply h-[70px] w-[70px] rounded-full object-cover
+		@apply h-[70px] w-[70px] rounded-full object-cover;
 	}
 
 	.review-item .review-content .review-quote {
@@ -165,7 +177,7 @@
 	}
 
 	.star::before {
-		@apply content-[''] block bg-[url('../../assets/img/icon/star.svg')] h-[15px] w-[15px] bg-no-repeat bg-contain;
+		@apply block h-[15px] w-[15px] bg-[url('../../assets/img/icon/star.svg')] bg-contain bg-no-repeat content-[''];
 	}
 }
 
@@ -175,7 +187,7 @@
 }
 
 .splide__pagination__page {
-	@apply  h-3 w-3 cursor-pointer rounded-full bg-primary transition-colors duration-300;
+	@apply h-3 w-3 cursor-pointer rounded-full bg-primary transition-colors duration-300;
 }
 
 .splide__pagination__page.is-active {
@@ -183,16 +195,14 @@
 }
 /* Cutom Splide dots pagination End */
 
-
 /* Custom Splide Arrow */
 .splide__arrows {
-	@apply flex gap-[100px] justify-center mt-[60px];
+	@apply mt-[60px] flex justify-center gap-[100px];
 }
 .splide__arrow--prev {
-	@apply bg-[url('../../assets/img/icon/left-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain hover:opacity-80 duration-300 transition-opacity;
-	
+	@apply block h-[75px] w-[75px] bg-[url('../../assets/img/icon/left-arrow-navigation.svg')] bg-contain bg-no-repeat transition-opacity duration-300 hover:opacity-80;
 }
 .splide__arrow--next {
-	@apply bg-[url('../../assets/img/icon/right-arrow-navigation.svg')] block h-[75px] w-[75px] bg-no-repeat bg-contain hover:opacity-80 duration-300 transition-opacity;
+	@apply block h-[75px] w-[75px] bg-[url('../../assets/img/icon/right-arrow-navigation.svg')] bg-contain bg-no-repeat transition-opacity duration-300 hover:opacity-80;
 }
 /* Custom Splide Arrow End*/

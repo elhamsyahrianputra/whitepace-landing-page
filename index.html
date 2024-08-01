@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="./dist/css/main.css" />
 	</head>
 
-	<body class="h-[3000px]">
+	<body>
 		<header id="navbar" class="sticky top-0 z-[9999] bg-light shadow">
 			<div class="flex items-center justify-between p-4 sm:px-8">
 				<div>
@@ -55,7 +55,7 @@
 						</li>
 						<li class="navbar-item sm:hidden">
 							<div class="flex flex-col gap-4 pr-8 text-center">
-								<a href="#login" class="text-priamry-dark rounded-md bg-secondary-yellow py-3 font-medium transition-opacity duration-300 hover:opacity-80">Login</a>
+								<a href="#login" id="btn-login" class="text-priamry-dark rounded-md bg-secondary-yellow py-3 font-medium transition-opacity duration-300 hover:opacity-80">Login</a>
 								<a href="#try" class="rounded-md bg-primary py-3 font-medium text-light transition-opacity duration-300 hover:opacity-80">Try whitepace Free</a>
 							</div>
 						</li>
@@ -63,7 +63,7 @@
 				</nav>
 				<div class="flex items-center gap-5">
 					<div class="hidden gap-6 md:flex">
-						<a href="#login" class="text-priamry-dark rounded-md bg-secondary-yellow px-6 py-4 font-medium transition-opacity duration-300 hover:opacity-80">Login</a>
+						<a href="#login" id="btn-login" class="text-priamry-dark rounded-md bg-secondary-yellow px-6 py-4 font-medium transition-opacity duration-300 hover:opacity-80">Login</a>
 						<a href="#try" class="rounded-md bg-primary px-6 py-4 font-medium text-light transition-opacity duration-300 hover:opacity-80">Try whitepace Free</a>
 					</div>
 					<button id="menu-button" class="flex flex-col gap-2">
@@ -73,8 +73,53 @@
 					</button>
 				</div>
 			</div>
-		</header>
+			<div id="login-modal" class="login-modal">
+				<div id="login-card" class="card-shadow relative p-6 min-w-[calc(100%-4rem)] md:min-w-[420px] rounded-lg bg-light md:p-8 md:max-w-[500px]">
+					<div class="mb-8 relative flex justify-between">
+						<h2 class="text-xl font-bold">Join Whitepace</h2>
+						<button id="btn-close" class="px-1 hover:bg-dark hover:bg-opacity-5 rounded transition-all duration-300">
+							<span class="block w-6 border-b-[3px] border-b-dark rounded-full -rotate-45 translate-y-[1px]"></span>
+							<span class="block w-6 border-b-[3px] border-b-dark rounded-full rotate-45 -translate-y-[1.5px]"></span>
+						</button>
+					</div>
 
+					<div class="flex flex-col gap-4">
+						<a class="flex items-center justify-center gap-3 rounded-lg border p-3 transition-all duration-300 hover:border-primary" href="#">
+							<img class="h-5" src="./assets/img/icon/google.svg" alt="" />
+							Log in with Google
+						</a>
+						<a class="flex items-center justify-center gap-3 rounded-lg border p-3 transition-all duration-300 hover:border-primary" href="#">
+							<img class="h-5" src="./assets/img/icon/apple.svg" alt="" />
+							Log in with Apple
+						</a>
+					</div>
+					<div class="my-4 flex items-center">
+						<span class="block h-[1px] w-full border"></span>
+						<span class="px-4">or</span>
+						<span class="block h-[1px] w-full border"></span>
+					</div>
+					<div class="mb-4">
+						<form action="#">
+							<div class="mb-4 flex flex-col">
+								<label for="email" class="mb-1 font-medium">Email</label>
+								<input class="rounded-lg border bg-[#f0f4f8] px-4 py-2 focus:outline-primary outline-none focus:text-primary transition-all duration-300" type="text" placeholder="name@example.com" />
+							</div>
+							<div class="mb-6 flex flex-col">
+								<label for="password" class="mb-1 font-medium">Password</label>
+								<input class="rounded-lg border bg-[#f0f4f8] px-4 py-2 focus:outline-primary outline-none focus:text-primary transition-all duration-300" type="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
+							</div>
+							<div class="flex flex-col">
+								<button class="inline-block rounded-lg bg-primary py-4 text-white transition-opacity duration-300 hover:opacity-80">Sign Up</button>
+							</div>
+						</form>
+					</div>
+					<div class="flex justify-center gap-2 text-sm">
+						<span>Don't have an account?</span>
+						<a href="#" class="font-semibold text-primary hover:opacity-80 transition-opacity duration-300">Sign Up</a>
+					</div>
+				</div>
+			</div>
+		</header>
 		<main>
 			<section id="hero">
 				<div class="container mx-auto flex flex-col px-4 py-20 md:px-5 md:py-[100px] lg:flex-row lg:px-8 lg:py-[140px] xl:py-[100px] 2xl:py-[140px]">
@@ -468,31 +513,31 @@
 									whole team as your needs grow
 								</p>
 								<div>
-									<a href="#" class="hover:opcaity-80 inline-block rounded-lg bg-primary px-10 py-5 hover:opacity-80 transition-opacity duration-300">Start today</a>
+									<a href="#" class="hover:opcaity-80 inline-block rounded-lg bg-primary px-10 py-5 transition-opacity duration-300 hover:opacity-80">Start today</a>
 								</div>
 							</div>
 						</div>
 						<div class="flex flex-col gap-5 text-center text-lg font-light text-light lg:flex-row lg:justify-between">
 							<ul class="flex flex-col justify-between gap-5 border-b pb-5 md:flex-row md:gap-0 lg:gap-[60px] lg:border-none lg:border-b-[#2E4E73]">
-								<li><a href="#" class="hover:text-secondary-yellow transition-colors duration-300">English</a></li>
-								<li><a href="#" class="hover:text-secondary-yellow transition-colors duration-300">Terms & privacy</a></li>
-								<li><a href="#" class="hover:text-secondary-yellow transition-colors duration-300">Security</a></li>
-								<li><a href="#" class="hover:text-secondary-yellow transition-colors duration-300">Status</a></li>
+								<li><a href="#" class="transition-colors duration-300 hover:text-secondary-yellow">English</a></li>
+								<li><a href="#" class="transition-colors duration-300 hover:text-secondary-yellow">Terms & privacy</a></li>
+								<li><a href="#" class="transition-colors duration-300 hover:text-secondary-yellow">Security</a></li>
+								<li><a href="#" class="transition-colors duration-300 hover:text-secondary-yellow">Status</a></li>
 								<li>&copy;2021 Whitepace LLC</li>
 							</ul>
 							<ul class="flex justify-center gap-8">
 								<li>
-									<a href="https://facebook.com" target="_blank" class="hover:border hover:opacity-80 duration-300 transition-opacity">
+									<a href="https://facebook.com" target="_blank" class="transition-opacity duration-300 hover:border hover:opacity-80">
 										<img class="h-[17px]" src="./assets/img/icon/facebook-white.svg" alt="" />
 									</a>
 								</li>
 								<li>
-									<a href="https://twitter.com" target="_blank" class="hover:border hover:opacity-80 duration-300 transition-opacity">
+									<a href="https://twitter.com" target="_blank" class="transition-opacity duration-300 hover:border hover:opacity-80">
 										<img class="h-[17px]" src="./assets/img/icon/twitter-white.svg" alt="" />
 									</a>
 								</li>
 								<li>
-									<a href="https://linkedin.com" target="_blank" class="hover:border hover:opacity-80 duration-300 transition-opacity">
+									<a href="https://linkedin.com" target="_blank" class="transition-opacity duration-300 hover:border hover:opacity-80">
 										<img class="h-[17px]" src="./assets/img/icon/linkedin-white.svg" alt="" />
 									</a>
 								</li>
